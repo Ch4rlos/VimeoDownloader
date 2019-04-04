@@ -1,24 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="msT-yz-2VM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="hOm-Yg-pVB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="msT-yz-2VM" customClass="ViewController" customModule="VimeoDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AzA-CP-nUm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pG-4V-j1z">
+                                <rect key="frame" x="20" y="44" width="43" height="30"/>
+                                <state key="normal" title="Volver"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa0-SZ-mjo">
+                                <rect key="frame" x="20" y="120" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpw-8Y-PMT">
+                                <rect key="frame" x="20" y="149" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AK-Av-sqM">
+                                <rect key="frame" x="20" y="178" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZk-88-EJ1">
+                                <rect key="frame" x="20" y="207" width="374" height="280.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eZk-88-EJ1" secondAttribute="height" multiplier="4:3" id="tsm-WB-JwD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS8-dq-FxW">
+                                <rect key="frame" x="323" y="120" width="71" height="79"/>
+                                <state key="normal" title="Descargar"/>
+                                <connections>
+                                    <action selector="downloadVimeo:" destination="msT-yz-2VM" eventType="touchUpInside" id="894-io-zji"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="326306801" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJW-QX-Qjm">
+                                <rect key="frame" x="20" y="82" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3AK-Av-sqM" firstAttribute="top" secondItem="Dpw-8Y-PMT" secondAttribute="bottom" constant="8" id="2Iq-Ul-etD"/>
+                            <constraint firstItem="eZk-88-EJ1" firstAttribute="leading" secondItem="hXk-as-gaE" secondAttribute="leading" constant="20" id="3nY-4f-L0Q"/>
+                            <constraint firstItem="1pG-4V-j1z" firstAttribute="top" secondItem="hXk-as-gaE" secondAttribute="top" id="4L6-5A-OaM"/>
+                            <constraint firstItem="wa0-SZ-mjo" firstAttribute="top" secondItem="UJW-QX-Qjm" secondAttribute="bottom" constant="8" id="T5L-2F-RP9"/>
+                            <constraint firstItem="Dpw-8Y-PMT" firstAttribute="top" secondItem="wa0-SZ-mjo" secondAttribute="bottom" constant="8" id="aMM-ci-NdW"/>
+                            <constraint firstItem="vS8-dq-FxW" firstAttribute="trailing" secondItem="UJW-QX-Qjm" secondAttribute="trailing" id="atU-gP-zsU"/>
+                            <constraint firstItem="vS8-dq-FxW" firstAttribute="top" secondItem="wa0-SZ-mjo" secondAttribute="top" id="bTo-NH-vRK"/>
+                            <constraint firstItem="3AK-Av-sqM" firstAttribute="leading" secondItem="hXk-as-gaE" secondAttribute="leading" constant="20" id="bUv-3W-5AX"/>
+                            <constraint firstItem="UJW-QX-Qjm" firstAttribute="leading" secondItem="hXk-as-gaE" secondAttribute="leading" constant="20" id="dnQ-Pp-taV"/>
+                            <constraint firstItem="hXk-as-gaE" firstAttribute="trailing" secondItem="eZk-88-EJ1" secondAttribute="trailing" constant="20" id="eLV-r1-UCT"/>
+                            <constraint firstItem="UJW-QX-Qjm" firstAttribute="top" secondItem="1pG-4V-j1z" secondAttribute="bottom" constant="8" id="f6G-fo-Ono"/>
+                            <constraint firstItem="1pG-4V-j1z" firstAttribute="leading" secondItem="hXk-as-gaE" secondAttribute="leading" constant="20" id="fhO-md-VYj"/>
+                            <constraint firstItem="Dpw-8Y-PMT" firstAttribute="leading" secondItem="hXk-as-gaE" secondAttribute="leading" constant="20" id="gex-ur-sYh"/>
+                            <constraint firstItem="hXk-as-gaE" firstAttribute="trailing" secondItem="UJW-QX-Qjm" secondAttribute="trailing" constant="20" id="jTL-Q2-gCd"/>
+                            <constraint firstItem="vS8-dq-FxW" firstAttribute="bottom" secondItem="3AK-Av-sqM" secondAttribute="bottom" id="oKO-2n-GXu"/>
+                            <constraint firstItem="wa0-SZ-mjo" firstAttribute="leading" secondItem="hXk-as-gaE" secondAttribute="leading" constant="20" id="ok8-zx-st0"/>
+                            <constraint firstItem="eZk-88-EJ1" firstAttribute="top" secondItem="3AK-Av-sqM" secondAttribute="bottom" constant="8" id="zIg-hO-pOK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hXk-as-gaE"/>
                     </view>
+                    <connections>
+                        <outlet property="idTextBar" destination="UJW-QX-Qjm" id="4fj-1V-Ylz"/>
+                        <outlet property="imageTitle" destination="wa0-SZ-mjo" id="OMr-VT-bGH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqq-if-o7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="414" y="75"/>
         </scene>
     </scenes>
 </document>
